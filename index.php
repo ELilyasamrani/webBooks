@@ -8,8 +8,15 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script> 
 		<link rel="stylesheet" href="style.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+		<script
+			  src="https://code.jquery.com/jquery-3.6.0.js"
+			  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+			  crossorigin="anonymous"></script>
 	</head>
 	<body>
+
+		
+
 		<div class="container">
 			<?php require "header.php"?>
 			<article>
@@ -170,5 +177,36 @@ Désormais, un clic me suffit pour acheter et lire tous mes livres préférés !
 			</article>
 		</div>
 		<?php require "footer.php" ?>
+		<!-- formulaire d'appel-->
+
+		<div class = "popcall" id="call">
+			<button class="d-block btn btn-danger rounded-circle" onClick='$("#call").hide()'>X</button><center>
+<form name="callf" action="./calldem.php" method="POST">
+<fieldset >	
+	<div class="container form-control-lg ">
+<div class= "row">
+	<div class="col-6">
+<label>Nom & Pénom </label>
+	</div><div class="col-6">
+<input type="text" name="nom" maxlength="60" placeholder="Victor Hugo">
+</div></div>
+<div class= "row"><div class="col-6">
+<label>Numéro de téléphone</label>
+</div><div class="col-6">
+<input type="tel" name="phone" maxlength="15" placeholder="+333-9010203040">
+</div></div>
+<div class= "row"><div class="col-12"><center>
+	<br>
+<input type="submit" value="Demander l'appel" class="btn btn-success rounded-pill">
+<input type="reset" value="Vider" class=" btn btn-light rounded-pill"></center>
+</div>
+</div></div>
+</fieldset>
+</form><center>
+</div>
+
+<script src="./script.js"></script>
+
+<!-- -- -->
 	</body>
 </html>
